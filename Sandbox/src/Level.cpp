@@ -63,7 +63,6 @@ static bool PointInTri(const glm::vec2& p, glm::vec2& p0, const glm::vec2& p1, c
 		(s >= 0 && s + t <= A);
 }
 
-
 void Level::Init()
 {
 	m_TriangleTexture = Texture2D::Create("assets/textures/Triangle.png");
@@ -71,8 +70,9 @@ void Level::Init()
 
 	m_Pillars.resize(5);
 	for (int i = 0; i < 5; i++)
-		CreatePillar(i, i * 10.0f);
+		CreatePillar(i, i * 20.0f);
 }
+
 
 void Level::OnUpdate(Hazel::Timestep ts)
 {
@@ -137,6 +137,8 @@ void Level::CreatePillar(int index, float offset)
 	pillar.TopPosition.y = 10.0f - ((10.0f - center) * 0.2f) + gap * 0.5f;
 	pillar.BottomPosition.y = -10.0f - ((-10.0f - center) * 0.2f) - gap * 0.5f;
 }
+
+
 
 bool Level::CollisionTest()
 {

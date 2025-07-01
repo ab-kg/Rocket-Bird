@@ -83,3 +83,6 @@ void Player::Reset()
 	m_Position = { -10.0f, 0.0f };
 	m_Velocity = { 5.0f, 0.0f };
 }
+
+
+

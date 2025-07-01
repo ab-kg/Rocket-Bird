@@ -1,5 +1,4 @@
 #pragma once
-
 #include <Hazel.h>
 
 struct ParticleProps
@@ -37,3 +36,4 @@ private:
 	std::vector<Particle> m_ParticlePool;
 	uint32_t m_PoolIndex = 999;
 };
+

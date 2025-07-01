@@ -34,4 +34,5 @@ private:
 	};
 
 	GameState m_State = GameState::MainMenu;
+
 };

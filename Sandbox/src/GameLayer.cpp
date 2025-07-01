@@ -74,6 +74,7 @@ void GameLayer::OnImGuiRender()
 			ImGui::GetForegroundDrawList()->AddText(m_Font, 48.0f, ImGui::GetWindowPos(), 0xffffffff, scoreStr.c_str());
 			break;
 		}
+
 		case GameState::MainMenu:
 		{
 			auto pos = ImGui::GetWindowPos();
@@ -85,6 +86,7 @@ void GameLayer::OnImGuiRender()
 				ImGui::GetForegroundDrawList()->AddText(m_Font, 120.0f, pos, 0xffffffff, "Click to Play!");
 			break;
 		}
+
 		case GameState::GameOver:
 		{
 			auto pos = ImGui::GetWindowPos();
@@ -102,8 +104,10 @@ void GameLayer::OnImGuiRender()
 			ImGui::GetForegroundDrawList()->AddText(m_Font, 48.0f, pos, 0xffffffff, scoreStr.c_str());
 			break;
 		}
+
 	}
 }
+
 
 void GameLayer::OnEvent(Hazel::Event& e)
 {
